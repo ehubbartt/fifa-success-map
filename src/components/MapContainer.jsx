@@ -1,13 +1,16 @@
 import React from "react";
 import "../styles/map-container.css";
 import { useMapContext } from "../context/mapContext";
+import mapboxgl from "mapbox-gl";
 import Map, {
   ScaleControl,
   NavigationControl,
   Source,
   Layer,
 } from "react-map-gl";
-
+mapboxgl.workerClass =
+  // eslint-disable-next-line import/no-webpack-loader-syntax
+  require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 const mapboxAccessToken =
   "pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw";
 
