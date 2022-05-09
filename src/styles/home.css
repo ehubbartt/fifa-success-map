@@ -1,0 +1,14 @@
+.page-content {
+  height: 100%;
+  width: calc(100% - var(--sidebar-width));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.specificity-selector {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  padding: 1rem;
+}

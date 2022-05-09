@@ -1,3 +1,11 @@
+:root {
+  --color-primary: hsl(208, 53%, 41%, 1);
+  --color-primary-light: hsl(208, 53%, 41%, 0.5);
+  --navbar-height: 3rem;
+  --page-height: calc(100vh - var(--navbar-height));
+  --sidebar-width: max(20rem, 25%);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,12 +14,27 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
   width: 100%;
   height: 100%;
+  font-family: "Open Sans", sans-serif;
 }
 
 #root {
   width: 100%;
   height: 100%;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.page-container {
+  width: 100%;
+  height: var(--page-height);
+  display: flex;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }

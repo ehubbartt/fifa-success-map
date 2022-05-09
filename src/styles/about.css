@@ -1,0 +1,31 @@
+.about-container {
+  padding: 1rem;
+  flex-direction: column;
+}
+
+.team-members-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.team-subheading {
+  width: 100%;
+  text-align: center;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.member-picture {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 1000rem;
+  overflow: hidden;
+}

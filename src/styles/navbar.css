@@ -1,0 +1,29 @@
+nav {
+  height: var(--navbar-height);
+  background-color: var(--color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
+}
+
+.fifa-logo {
+  height: 1.5rem;
+  margin-left: 1rem;
+}
+
+.nav-btn {
+  display: grid;
+  place-items: center;
+  height: 2rem;
+}
+
+.about {
+  font-weight: 600;
+}
