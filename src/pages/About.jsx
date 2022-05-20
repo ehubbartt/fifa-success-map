@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/about.css";
 import { teamMembers } from "../constants/teamMembers";
+import { aboutInfo } from "../constants/aboutInfo";
 const About = () => {
   const defaultImage =
     "https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg";
@@ -24,15 +25,21 @@ const About = () => {
           );
         })}
       </div>
-      <h4>Goal</h4>
+      <div>
+        <h4>Goal:</h4>
+        <p>{aboutInfo.goal}</p>
+      </div>
       <div>
         <h4>Methodology: </h4>
+        <p>{aboutInfo.methodology}</p>
       </div>
       <div>
         <h4>Data Sources: </h4>
+        {aboutInfo.dataSources}
       </div>
       <div>
         <h4>Acknowledgements: </h4>
+        {aboutInfo.acknowledgements}
       </div>
     </div>
   );
