@@ -21,7 +21,7 @@ export const teamMembers = [
   },
   {
     name: "Aaron Thai",
-    info: "info",
-    img: "",
+    info: "Junior at UW Seattle majoring in Geography: Data Science",
+    img: '../assets/img/aaron.jpg',
   },
 ];
