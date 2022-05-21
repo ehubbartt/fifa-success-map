@@ -11,8 +11,8 @@ export const teamMembers = [
   },
   {
     name: "Yuantai Li",
-    info: "info",
-    img: "",
+    info: "Junior at UW Seattle in Geography : Data Science major",
+    img: "../assets/img/yuantai.jpg",
   },
   {
     name: "Hudson Potts",
