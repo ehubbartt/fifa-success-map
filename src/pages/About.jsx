@@ -16,7 +16,7 @@ const About = () => {
             <div className="team-member" key={index}>
               <img
                 className="member-picture"
-                src={member.image ? member.image : defaultImage}
+                src={member.img ? member.img : defaultImage}
                 alt={member.name}
               />
               <h4>{member.name}</h4>

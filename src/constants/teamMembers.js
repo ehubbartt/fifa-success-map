@@ -1,3 +1,6 @@
+import aaron from "../assets/img/aaron.jpg";
+import yuantai from "../assets/img/yuantai.jpg";
+import ethan from "../assets/img/EthanHubbartt.jpg";
 export const teamMembers = [
   {
     name: "Chalsea Chen",
@@ -6,13 +9,13 @@ export const teamMembers = [
   },
   {
     name: "Ethan Hubbartt",
-    info: "info",
-    img: "",
+    info: "Junior at UW seattle majoring in Geography: Data Science",
+    img: ethan,
   },
   {
     name: "Yuantai Li",
     info: "Junior at UW Seattle in Geography : Data Science major",
-    img: "../assets/img/yuantai.jpg",
+    img: yuantai,
   },
   {
     name: "Hudson Potts",
@@ -22,6 +25,6 @@ export const teamMembers = [
   {
     name: "Aaron Thai",
     info: "Junior at UW Seattle majoring in Geography: Data Science",
-    img: '../assets/img/aaron.jpg',
+    img: aaron,
   },
 ];
