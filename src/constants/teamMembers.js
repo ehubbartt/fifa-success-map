@@ -1,11 +1,12 @@
 import aaron from "../assets/img/aaron.jpg";
 import yuantai from "../assets/img/yuantai.jpg";
 import ethan from "../assets/img/EthanHubbartt.jpg";
+import chalsea from "../assets/img/chalsea.jpg";
 export const teamMembers = [
   {
     name: "Chalsea Chen",
-    info: "info",
-    img: "",
+    info: "Junior at UW Seattle majoring in Geography: Data Science",
+    img: chalsea,
   },
   {
     name: "Ethan Hubbartt",
