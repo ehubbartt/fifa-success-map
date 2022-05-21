@@ -1,23 +1,22 @@
-import { earthquakes } from "../assets/data/earthquakes";
+import { matches_data } from "../assets/data/matches_data";
 
 const grades = [4, 5, 6],
   colors = ["rgb(208,209,230)", "rgb(103,169,207)", "rgb(1,108,89)"],
   radii = [5, 15, 20];
 
 export const defaultMap = {
-  name: "default",
+  name: "matchData",
   title: "Default",
   style: "mapbox://styles/mapbox/dark-v10",
-  data: earthquakes,
-  center: [138, 38],
-  zoom: 5,
+  data: matches_data,
+  center: [-30, 38],
+  zoom: 2,
   projection: "mercator",
 
   layerOptions: {
-    id: "earthquakes-point",
+    id: "match",
     type: "circle",
-    source: "default",
-    minzoom: 5,
+    source: "matchData",
     paint: {
       // increase the radii of the circle as the zoom level and dbh value increases
       "circle-radius": {
