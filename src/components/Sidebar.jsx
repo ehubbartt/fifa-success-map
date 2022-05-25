@@ -6,7 +6,7 @@ import Chart from "./Chart";
 import MapInputSlider from "./MapInputSlider";
 import { useMapContext } from "../context/mapContext";
 import { styles } from "../constants/styles";
-import { types } from "../constants/types";
+import { types } from "../constants/mapTypes";
 import { mapData } from "../constants/mapData";
 
 const Sidebar = () => {
