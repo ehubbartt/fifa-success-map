@@ -1,7 +1,11 @@
 import React from "react";
 import "../styles/map-container.css";
 import { useMapContext } from "../context/mapContext";
+import SelectorContainer from "./SelectorContainer";
+import { types } from "../constants/mapTypes";
+import { mapData } from "../constants/mapData";
 import mapboxgl from "mapbox-gl";
+import { styles } from "../constants/styles";
 import Map, {
   ScaleControl,
   NavigationControl,
@@ -19,6 +23,12 @@ const MapContainer = () => {
 
   const handleClick = (map) => {
     console.log(map.features);
+  };
+
+  const handleStyleChange = (style) => {
+    let newMap = { ...curMap };
+    newMap.style = style.uri;
+    setCurMap(newMap);
   };
 
   return (
@@ -41,6 +51,15 @@ const MapContainer = () => {
         {curMap.layerOptions && <Layer {...curMap.layerOptions} />}
         <ScaleControl />
         <NavigationControl />
+        <div className="settings-container">
+          <SelectorContainer
+            title="Styles"
+            selectors={styles}
+            onChange={handleStyleChange}
+          />
+          <SelectorContainer title="Map Type" selectors={types} />
+          <SelectorContainer title="Data" selectors={mapData} />
+        </div>
       </Map>
     </div>
   );

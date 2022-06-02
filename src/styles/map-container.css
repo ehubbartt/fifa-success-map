@@ -2,3 +2,13 @@
   width: 100%;
   height: 100%;
 }
+
+.settings-container {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  margin: 0.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}

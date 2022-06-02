@@ -6,10 +6,7 @@ import "../styles/home.css";
 const Home = () => {
   return (
     <div className="page-container">
-      <Sidebar />
-      <div className="page-content">
-        <MapContainer />
-      </div>
+      <MapContainer />
     </div>
   );
 };

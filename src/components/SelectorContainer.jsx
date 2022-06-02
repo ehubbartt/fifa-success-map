@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Selector from "./Selector";
+import "../styles/selectors.css";
 
 const SelectorContainer = ({ title, selectors, onChange }) => {
   const [curSelected, setCurSelected] = useState(0);
@@ -10,7 +11,7 @@ const SelectorContainer = ({ title, selectors, onChange }) => {
   };
 
   return (
-    <>
+    <div className="selector-container">
       <h3>{title}</h3>
       <div
         className="selectors"
@@ -28,7 +29,7 @@ const SelectorContainer = ({ title, selectors, onChange }) => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

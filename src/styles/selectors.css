@@ -1,16 +1,11 @@
-.sidebar {
-  width: var(--sidebar-width);
-  background-color: white;
-  z-index: 1000;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding: 1rem;
-}
-
 .selectors {
   display: grid;
   border: 1px solid black;
   border-radius: 5px;
   place-items: center;
+}
+
+.selector-container {
 }
 
 .selector {
