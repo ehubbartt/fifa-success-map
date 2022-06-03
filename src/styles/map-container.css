@@ -3,12 +3,26 @@
   height: 100%;
 }
 
-.settings-container {
+.stacked-container {
   position: absolute;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-container {
   width: 20rem;
   height: 20rem;
-  margin: 0.5rem;
-  background-color: white;
+  background-color: whitesmoke;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.map-info {
+  width: 20rem;
+  background-color: whitesmoke;
   border-radius: 0.5rem;
   padding: 1rem;
 }
+

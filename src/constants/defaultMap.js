@@ -2,7 +2,7 @@ import { matches_data } from "../assets/data/matches_data";
 
 const grades = [1000, 10000, 50000],
   colors = ["rgb(208,209,230)", "rgb(103,169,207)", "rgb(1,108,89)"],
-  radii = [1, 2, 4];
+  radii = [7, 7, 7];
 
 export const defaultMap = {
   name: "matchData",
