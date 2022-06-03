@@ -1,6 +1,6 @@
 export const types = [
   {
-    name: "Dot-Density",
+    name: "Matches",
   },
   {
     name: "Choropleth",
