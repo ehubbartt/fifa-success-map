@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "../styles/map-container.css";
 import { useMapContext } from "../context/mapContext";
 import SelectorContainer from "./SelectorContainer";
@@ -7,7 +7,7 @@ import { mapData } from "../constants/mapData";
 import mapboxgl from "mapbox-gl";
 import { styles } from "../constants/styles";
 import MapInfo from "./MapInfo";
-import MatchesDataInfo from "./MatchesDataInfo"
+import MatchesDataInfo from "./MatchesDataInfo";
 import Map, {
   ScaleControl,
   NavigationControl,
@@ -22,8 +22,8 @@ const mapboxAccessToken =
 
 const MapContainer = () => {
   const { curMap, setCurMap } = useMapContext();
-  const [ curData, setCurData ] = useState({title: "Select a data point"});
-  const [ cursor, setCursor] = useState("grab")
+  const [curData, setCurData] = useState({ title: "Select a data point" });
+  const [cursor, setCursor] = useState("grab");
 
   const handleClick = (map) => {
     const properties = map.features[0].properties;
@@ -35,18 +35,19 @@ const MapContainer = () => {
       homeTeam: properties.HomeTeamName,
       awayTeam: properties.AwayTeamName,
       score: `${properties.HomeTeamGoals} - ${properties.AwayTeamGoals}`,
-      winner: (properties.HomeTeamGoals > properties.AwayTeamGoals) ? properties.HomeTeamame : properties.AwayTeamName,
+      winner:
+        properties.HomeTeamGoals > properties.AwayTeamGoals
+          ? properties.HomeTeamame
+          : properties.AwayTeamName,
       attendance: properties.Attendance,
-
-    })
+    });
   };
 
-  const handleMouseOver = (e) =>{
-  }
+  const handleMouseOver = (e) => {};
 
-  React.useEffect(()=> {
-    console.log(cursor)
-  },[cursor])
+  React.useEffect(() => {
+    console.log(cursor);
+  }, [cursor]);
 
   const handleStyleChange = (style) => {
     let newMap = { ...curMap };
@@ -75,7 +76,7 @@ const MapContainer = () => {
         {curMap.layerOptions && <Layer {...curMap.layerOptions} />}
         <ScaleControl />
         <NavigationControl />
-        <div className="stacked-container">  
+        <div className="stacked-container">
           <div className="settings-container">
             <SelectorContainer
               title="Styles"
@@ -85,8 +86,10 @@ const MapContainer = () => {
             <SelectorContainer title="Map Type" selectors={types} />
             <SelectorContainer title="Data" selectors={mapData} />
           </div>
-          <MapInfo title={curData.title} >
-            {(curData.title.includes("Select a data point")) || <MatchesDataInfo data={curData}/>}
+          <MapInfo title={curData.title}>
+            {curData.title.includes("Select a data point") || (
+              <MatchesDataInfo data={curData} />
+            )}
           </MapInfo>
         </div>
       </Map>
