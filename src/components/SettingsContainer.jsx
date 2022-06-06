@@ -51,7 +51,7 @@ const SettingsContainer = () => {
               selectors={styles}
               onChange={handleStyleChange}
             />
-            <SelectorContainer title="Map Type" selectors={types} />
+            {/* <SelectorContainer title="Map Type" selectors={types} /> */}
             <SelectorContainer title="Data" selectors={mapData} onChange={handleDataChange}/>
           </div>
           </div>
