@@ -1,10 +1,10 @@
 import React, { useState, useContext } from "react";
-import { defaultMap } from "../constants/defaultMap";
+import { matchesMap } from "../constants/matchesMap";
 
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const [curMap, setCurMap] = useState(defaultMap);
+  const [curMap, setCurMap] = useState(matchesMap);
   const [features, setFeatures] = useState();
   const [dataTitle, setDataTitle] = useState("Select a data point");
   const [curData, setCurData] = useState({});

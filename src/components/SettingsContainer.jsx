@@ -4,13 +4,32 @@ import SelectorContainer from './SelectorContainer';
 import { types } from "../constants/mapTypes";
 import { mapData } from "../constants/mapData";
 import { styles } from "../constants/styles";
+import {useMapContext} from '../context/mapContext'
+import { matchesMap } from '../constants/matchesMap';
+import { countriesMap } from '../constants/countriesMap';
 
-
-const SettingsContainer = ({handleStyleChange}) => {
+const SettingsContainer = () => {
   const [isOpen, setIsOpen] = useState(true);
+  const {curMap, setCurMap} = useMapContext();
 
   const handleCollapse = () => {
     setIsOpen(!isOpen);
+  }
+
+  const handleStyleChange = (style) => {
+    let newMap = { ...curMap };
+    newMap.style = style.uri;
+    setCurMap(newMap);
+  };
+
+  const handleDataChange = ({name})=> {
+    if (name === "World Cup Locations") {
+
+      setCurMap(matchesMap);
+    } else if (name === "Country Data") {
+
+      setCurMap(countriesMap);
+    }
   }
 
   return (
@@ -31,7 +50,7 @@ const SettingsContainer = ({handleStyleChange}) => {
               onChange={handleStyleChange}
             />
             <SelectorContainer title="Map Type" selectors={types} />
-            <SelectorContainer title="Data" selectors={mapData} />
+            <SelectorContainer title="Data" selectors={mapData} onChange={handleDataChange}/>
           </div>
           </div>
   )

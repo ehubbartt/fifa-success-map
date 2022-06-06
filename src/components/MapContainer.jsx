@@ -17,22 +17,20 @@ const mapboxAccessToken =
   "pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw";
 
 const MapContainer = () => {
-  const { curMap, setCurMap, setFeatures, setDataTitle, setCurData, setInputSliderValue, setInputDateValue } = useMapContext();
+  const { curMap, setFeatures, setDataTitle, setCurData, setInputSliderValue, setInputDateValue } = useMapContext();
 
   const handleClick = (map) => {
-    const curFeatures = map.features;
-    setFeatures(curFeatures);
-    setDataTitle("World Cup Data");
-    setCurData(curFeatures[curFeatures.length - 1])
-    setInputSliderValue(0);
-    setInputDateValue(curFeatures[curFeatures.length - 1].properties.Datetime);
+    if (curMap.name === "matchesMap") {
+      const curFeatures = map.features;
+      setFeatures(curFeatures);
+      setDataTitle("World Cup Data");
+      setCurData(curFeatures[curFeatures.length - 1])
+      setInputSliderValue(0);
+      setInputDateValue(curFeatures[curFeatures.length - 1].properties.Datetime);
+    } else if (curMap.name === "countriesMap") {}
   };
 
-  const handleStyleChange = (style) => {
-    let newMap = { ...curMap };
-    newMap.style = style.uri;
-    setCurMap(newMap);
-  };
+  console.log(curMap.name);
 
   return (
     <div className="map-container">
@@ -49,13 +47,13 @@ const MapContainer = () => {
         interactiveLayerIds={[curMap.layerOptions.id]}
       >
         {curMap.data && (
-          <Source id={curMap.name} type="geojson" data={curMap.data} />
+          <Source id={curMap.id} type="geojson" data={curMap.data} />
         )}
         {curMap.layerOptions && <Layer {...curMap.layerOptions} />}
         <ScaleControl />
         <NavigationControl />
         <div className="stacked-container">
-          <SettingsContainer handleStyleChange={handleStyleChange}/>
+          <SettingsContainer />
           <MapInfo />
         </div>
       </Map>

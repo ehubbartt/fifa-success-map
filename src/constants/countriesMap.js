@@ -1,22 +1,23 @@
-import { matches_data } from "../assets/data/matches_data";
+import { countries_data } from '../assets/data/countries_data.js';
 
 const grades = [1000, 10000, 50000],
   colors = ["rgb(208,209,230)", "rgb(103,169,207)", "rgb(1,108,89)"],
   radii = [7, 7, 7];
 
-export const defaultMap = {
-  name: "matchData",
-  title: "Default",
+export const countriesMap = {
+  name: "countriesMap",
+  title: "countries",
   style: "mapbox://styles/mapbox/dark-v10",
-  data: matches_data,
+  data: countries_data,
   center: [0, 16],
   zoom: 1,
   projection: "mercator",
+  id:"do_not_change_this_value",
 
   layerOptions: {
-    id: "match",
+    id: "do_not_change_this_valu",
     type: "circle",
-    source: "matchData",
+    source: "do_not_change_this_value",
     paint: {
       // increase the radii of the circle as the zoom level and dbh value increases
       "circle-radius": {
