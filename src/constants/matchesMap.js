@@ -5,7 +5,7 @@ const grades = [1000, 10000, 50000],
   radii = [7, 7, 7];
 
 export const matchesMap = {
-  name: "matchData",
+  name: "matchesMap",
   title: "matchesMap",
   style: "mapbox://styles/mapbox/dark-v10",
   data: matches_data,

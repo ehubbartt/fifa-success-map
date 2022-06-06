@@ -23,6 +23,10 @@
   align-items: center;
   margin-right: 1rem;
   max-width: 15rem;
+  padding: 1rem;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: .25rem;
+  margin: 1rem;
 }
 
 .member-picture {

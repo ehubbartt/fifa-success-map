@@ -20,7 +20,7 @@ export const teamMembers = [
   },
   {
     name: "Hudson Potts",
-    info: "info",
+    info: "Junior at UW Seattle in Geography : Data Science major",
     img: "",
   },
   {
