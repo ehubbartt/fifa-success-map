@@ -37,7 +37,7 @@
 
 .map-info {
   transition: all 0.5s ease;
-  overflow: scroll;
+  overflow-y: scroll;
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-height: 25vh;
