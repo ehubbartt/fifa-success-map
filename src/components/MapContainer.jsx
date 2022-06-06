@@ -1,13 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/map-container.css";
 import { useMapContext } from "../context/mapContext";
-import SelectorContainer from "./SelectorContainer";
-import { types } from "../constants/mapTypes";
-import { mapData } from "../constants/mapData";
 import mapboxgl from "mapbox-gl";
-import { styles } from "../constants/styles";
 import MapInfo from "./MapInfo";
-import MatchesDataInfo from "./MatchesDataInfo";
+import SettingsContainer from "./SettingsContainer";
 import Map, {
   ScaleControl,
   NavigationControl,
@@ -21,33 +17,16 @@ const mapboxAccessToken =
   "pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw";
 
 const MapContainer = () => {
-  const { curMap, setCurMap } = useMapContext();
-  const [curData, setCurData] = useState({ title: "Select a data point" });
-  const [cursor, setCursor] = useState("grab");
+  const { curMap, setCurMap, setFeatures, setDataTitle, setCurData, setInputSliderValue, setInputDateValue } = useMapContext();
 
   const handleClick = (map) => {
-    const properties = map.features[0].properties;
-    setCurData({
-      title: "Matches Data",
-      city: properties.City,
-      stadium: properties.Stadium,
-      date: properties.Datetime,
-      homeTeam: properties.HomeTeamName,
-      awayTeam: properties.AwayTeamName,
-      score: `${properties.HomeTeamGoals} - ${properties.AwayTeamGoals}`,
-      winner:
-        properties.HomeTeamGoals > properties.AwayTeamGoals
-          ? properties.HomeTeamame
-          : properties.AwayTeamName,
-      attendance: properties.Attendance,
-    });
+    const curFeatures = map.features;
+    setFeatures(curFeatures);
+    setDataTitle("World Cup Data");
+    setCurData(curFeatures[curFeatures.length - 1])
+    setInputSliderValue(0);
+    setInputDateValue(curFeatures[curFeatures.length - 1].properties.Datetime);
   };
-
-  const handleMouseOver = (e) => {};
-
-  React.useEffect(() => {
-    console.log(cursor);
-  }, [cursor]);
 
   const handleStyleChange = (style) => {
     let newMap = { ...curMap };
@@ -59,7 +38,6 @@ const MapContainer = () => {
     <div className="map-container">
       <Map
         onClick={handleClick}
-        onMouseOver={handleMouseOver}
         initialViewState={{
           longitude: curMap.center[0],
           latitude: curMap.center[1],
@@ -77,20 +55,8 @@ const MapContainer = () => {
         <ScaleControl />
         <NavigationControl />
         <div className="stacked-container">
-          <div className="settings-container">
-            <SelectorContainer
-              title="Styles"
-              selectors={styles}
-              onChange={handleStyleChange}
-            />
-            <SelectorContainer title="Map Type" selectors={types} />
-            <SelectorContainer title="Data" selectors={mapData} />
-          </div>
-          <MapInfo title={curData.title}>
-            {curData.title.includes("Select a data point") || (
-              <MatchesDataInfo data={curData} />
-            )}
-          </MapInfo>
+          <SettingsContainer handleStyleChange={handleStyleChange}/>
+          <MapInfo />
         </div>
       </Map>
     </div>

@@ -1,25 +1,38 @@
-import React, { useState } from "react";
+import React from "react";
+import { Slider } from "@mui/material";
+import { useMapContext } from "../context/mapContext";
+const MapInputSlider = ({ isOpen }) => {
+  const {setCurData, features, inputDateValue, setInputDateValue, inputSliderValue, setInputSliderValue} = useMapContext();
+  let allData = Array.from(features).reverse();
 
-const MapInputSlider = () => {
-  const [inputSliderValue, setInputSliderValue] = useState(2000);
+  let marks =  allData.map((item, index) => {
+    const mark = {
+      value: index,
+      date: item.properties.Datetime, 
+    }
+    return mark;
+  })
+
+    const handleInputChange = (event, value) => {
+      setInputDateValue(marks[value].date);
+      setCurData(allData[value]);
+      setInputSliderValue(value);
+    }
+    
 
   return (
-    <div className="input-slider-container">
-      <h3>{`Season: ${inputSliderValue}`}</h3>
-      <input
-        id="map-slider"
-        type="range"
-        min="1980"
-        max="2020"
-        step="10"
-        onChange={(e) => setInputSliderValue(e.target.value)}
+   <div className={isOpen ? "input-slider-container" : "input-slider-container closed"} 
+   style={isOpen ? {} : {overflow:"hidden"}}>
+      <h3>{`Date: ${inputDateValue}`}</h3>
+      <Slider 
+      aria-label="Restricted values"
+        step={null}
+        min={0}
+        max={marks.length - 1}
         value={inputSliderValue}
-      />
-      <div className="input-label">
-        <span>1980</span>
-        <span>2000</span>
-        <span>2020</span>
-      </div>
+        onChange={handleInputChange}
+        valueLabelDisplay="off"
+        marks={marks}/>
     </div>
   );
 };

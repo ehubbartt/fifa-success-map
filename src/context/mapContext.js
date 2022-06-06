@@ -5,8 +5,25 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [curMap, setCurMap] = useState(defaultMap);
+  const [features, setFeatures] = useState();
+  const [dataTitle, setDataTitle] = useState("Select a data point");
+  const [curData, setCurData] = useState({});
+  const [inputDateValue, setInputDateValue] = useState();
+  const [inputSliderValue, setInputSliderValue] = useState();
   return (
-    <AppContext.Provider value={{ curMap, setCurMap }}>
+    <AppContext.Provider value={{ curMap, 
+    setCurMap, 
+    features, 
+    setFeatures, 
+    dataTitle, 
+    setDataTitle, 
+    curData, 
+    setCurData,
+    inputDateValue,
+    setInputDateValue,
+    inputSliderValue,
+    setInputSliderValue
+     }}>
       {children}
     </AppContext.Provider>
   );

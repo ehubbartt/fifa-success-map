@@ -1,6 +1,6 @@
 export const mapData = [
   {
-    name: "# of Players",
+    name: "World Cup Locations",
   },
   {
     name: "# of Wins",

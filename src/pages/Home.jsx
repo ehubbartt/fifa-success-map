@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import Sidebar from "../components/Sidebar";
+import React from "react";
 import MapContainer from "../components/MapContainer";
 import "../styles/home.css";
 

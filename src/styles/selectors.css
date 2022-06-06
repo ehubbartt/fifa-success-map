@@ -29,10 +29,6 @@
   background-color: var(--color-primary);
 }
 
-.input-slider-container {
-  display: flex;
-  flex-direction: column;
-}
 
 #map-slider {
   width: 100%;

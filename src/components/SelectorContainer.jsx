@@ -4,7 +4,7 @@ import "../styles/selectors.css";
 
 const SelectorContainer = ({ title, selectors, onChange }) => {
   const [curSelected, setCurSelected] = useState(0);
-
+  
   const handleClick = (index) => {
     setCurSelected(index);
     onChange(selectors[index]);

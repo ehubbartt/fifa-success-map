@@ -1,27 +1,56 @@
-import React from 'react'
+import React from "react";
+import { useMapContext } from "../context/mapContext";
+const MatchesDataInfo = () => {
+  const { curData } = useMapContext();
+  if (!curData.properties) {
+    return null;
+  }
 
-const MatchesDataInfo = (data) => {
-  console.log(data)
+  let homeScore = curData.properties.HomeTeamGoals;
+  let awayScore = curData.properties.AwayTeamGoals;
+  const score = `${homeScore} - ${awayScore}`
+
+  let winner;
+  if (homeScore > awayScore) {
+    winner = curData.properties.HomeTeamName;
+  } else if(homeScore === awayScore) {
+    winner = "Tie"
+  } else {
+    winner = curData.properties.AwayTeamName;
+  }
+
   return (
     <>
-    <h3>City</h3>
-    <p>{data.data.city}</p>
-    <h3>Stadium</h3>
-    <p>{data.data.stadium}</p>
-    <h3>Date</h3>
-    <p>{data.data.date}</p>
-    <h3>Home Team</h3>
-    <p>{data.data.homeTeam}</p>
-    <h3>Away Team</h3>
-    <p>{data.data.awayTeam}</p>
-    <h3>Score</h3>
-    <p>{data.data.score}</p>
-    <h3>Winner</h3>
-    <p>{data.data.winner}</p>
-    <h3>Attendance</h3>
-    <p>{data.data.attendance}</p>
+      <div className="data-container">
+        <h3>City</h3>
+        <p>{curData.properties.City}</p>
+      </div>
+      <div className="data-container">
+        <h3>Stadium</h3>
+        <p>{curData.properties.Stadium}</p>
+      </div>
+      <div className="data-container">
+        <h3>Home Team</h3>
+        <p>{curData.properties.HomeTeamName}</p>
+      </div>
+      <div className="data-container">
+        <h3>Away Team</h3>
+        <p>{curData.properties.AwayTeamName}</p>
+      </div>
+      <div className="data-container">
+        <h3>Score</h3>
+        <p>{score}</p>
+      </div>
+      <div className="data-container">
+        <h3>Winner</h3>
+        <p>{winner}</p>
+      </div>
+      <div className="data-container">
+        <h3>Attendance</h3>
+        <p>{curData.properties.Attendance}</p>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default MatchesDataInfo
+export default MatchesDataInfo;

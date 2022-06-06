@@ -12,17 +12,72 @@
 
 .settings-container {
   width: 20rem;
-  height: 20rem;
-  background-color: whitesmoke;
+  max-height: 60rem;
+  background-color: hsl(0, 0%, 96%, 85%);
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 1rem 1rem;
   margin-bottom: 0.5rem;
 }
 
-.map-info {
-  width: 20rem;
-  background-color: whitesmoke;
+.selectors-container {
+  overflow:hidden;
+  max-height: 50rem;
+  transition: all 0.5s ease;
+}
+
+.map-info-container {
+  max-width: 20rem;
+  background-color: hsl(0, 0%, 96%, 85%);
   border-radius: 0.5rem;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.map-info {
+  transition: all 0.5s ease;
+  overflow: scroll;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-height: 25vh;
+}
+
+.data-container {
+}
+
+.data-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hide-button {
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: all 0.5s ease;
+}
+
+.input-slider-container {
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  grid-column: 1/3;
+  max-height: 100vh;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.closed {
+  max-height: 0;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: column;
 }
 

@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/navbar.css";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
