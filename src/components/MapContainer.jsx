@@ -50,7 +50,7 @@ const MapContainer = () => {
           <Source id={curMap.id} type="geojson" data={curMap.data} />
         )}
         {curMap.layerOptions && <Layer {...curMap.layerOptions} />}
-        <ScaleControl />
+        <ScaleControl position="bottom-right"/>
         <NavigationControl />
         <div className="stacked-container">
           <SettingsContainer />
