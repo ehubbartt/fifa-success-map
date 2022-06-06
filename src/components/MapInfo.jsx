@@ -3,6 +3,7 @@ import { BsArrowBarDown } from "react-icons/bs";
 import MatchesDataInfo from "./MatchesDataInfo";
 import MapInputSlider from "./MapInputSlider";
 import { useMapContext } from "../context/mapContext";
+import CountryDataInfo from "./CountryDataInfo"
 
 const MapInfo = () => {
   const { dataTitle } = useMapContext();
@@ -11,12 +12,13 @@ const MapInfo = () => {
     setIsOpen(!isOpen);
   };
 
+  console.log(dataTitle);
   return (
     <div className="map-info-container">
       <div className="top-container">
       <div className="data-title">
         <h1>{dataTitle}</h1>
-        {!dataTitle.includes("Select a data point") && (
+        {!dataTitle.includes("Select a Data Point") && (
           <div
             className={isOpen ? "hide-button rotate" : "hide-button"}
             onClick={handleCollapse}
@@ -25,10 +27,11 @@ const MapInfo = () => {
           </div>
         )}
       </div>
-        {dataTitle.includes("Select a data point") || <MapInputSlider isOpen={isOpen}/>}
+        {dataTitle.includes("World Cup Data") && <MapInputSlider isOpen={isOpen}/>}
       </div>
       <div className={isOpen ? "map-info" : "map-info closed"}>
-        {dataTitle.includes("Select a data point") || <MatchesDataInfo />}
+        {dataTitle.includes("World Cup Data") && <MatchesDataInfo />}
+        {dataTitle.includes("Country Data") && <CountryDataInfo />}
         </div>
     </div>
   );

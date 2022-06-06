@@ -6,7 +6,7 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [curMap, setCurMap] = useState(matchesMap);
   const [features, setFeatures] = useState();
-  const [dataTitle, setDataTitle] = useState("Select a data point");
+  const [dataTitle, setDataTitle] = useState("Select a Data Point");
   const [curData, setCurData] = useState({});
   const [inputDateValue, setInputDateValue] = useState();
   const [inputSliderValue, setInputSliderValue] = useState();

@@ -20,14 +20,18 @@ const MapContainer = () => {
   const { curMap, setFeatures, setDataTitle, setCurData, setInputSliderValue, setInputDateValue } = useMapContext();
 
   const handleClick = (map) => {
+    const curFeatures = map.features;
     if (curMap.name === "matchesMap") {
-      const curFeatures = map.features;
       setFeatures(curFeatures);
       setDataTitle("World Cup Data");
       setCurData(curFeatures[curFeatures.length - 1])
       setInputSliderValue(0);
       setInputDateValue(curFeatures[curFeatures.length - 1].properties.Datetime);
-    } else if (curMap.name === "countriesMap") {}
+    } else if (curMap.name === "countriesMap") {
+      setDataTitle("Country Data");
+      setFeatures(curFeatures[0]);
+      setCurData(curFeatures[0]);
+    }
   };
 
   console.log(curMap.name);

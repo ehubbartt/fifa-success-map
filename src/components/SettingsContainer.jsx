@@ -10,7 +10,7 @@ import { countriesMap } from '../constants/countriesMap';
 
 const SettingsContainer = () => {
   const [isOpen, setIsOpen] = useState(true);
-  const {curMap, setCurMap} = useMapContext();
+  const {curMap, setCurMap, setCurData, setFeatures, setDataTitle} = useMapContext();
 
   const handleCollapse = () => {
     setIsOpen(!isOpen);
@@ -23,8 +23,10 @@ const SettingsContainer = () => {
   };
 
   const handleDataChange = ({name})=> {
+    setCurData({});
+    setFeatures({});
+    setDataTitle("Select a Data Point");
     if (name === "World Cup Locations") {
-
       setCurMap(matchesMap);
     } else if (name === "Country Data") {
 
