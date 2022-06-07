@@ -4,6 +4,11 @@ import { useMapContext } from "../context/mapContext";
 import mapboxgl from "mapbox-gl";
 import MapInfo from "./MapInfo";
 import SettingsContainer from "./SettingsContainer";
+
+import { matchesMap } from "../constants/matchesMap";
+import {playerMap} from "../constants/playerMap";
+import { countriesMap } from "../constants/countriesMap";
+
 import Map, {
   ScaleControl,
   NavigationControl,
@@ -52,10 +57,24 @@ const MapContainer = () => {
         projection={curMap.projection}
         interactiveLayerIds={[curMap.layerOptions.id]}
       >
-        {curMap.data && (
-          <Source id={curMap.id} type="geojson" data={curMap.data} />
+        {curMap.name.includes("matchesMap") && (
+          <>
+          <Source id={matchesMap.id} type="geojson" data={matchesMap.data} />
+          <Layer {...matchesMap.layerOptions} />
+          </>
         )}
-        {curMap.layerOptions && <Layer {...curMap.layerOptions} />}
+        {curMap.name.includes("countriesMap") && (
+          <>
+          <Source id={countriesMap.id} type="geojson" data={countriesMap.data} />
+          <Layer {...countriesMap.layerOptions} />
+          </>
+        )}
+        {curMap.name.includes("playerMap") && (
+          <>
+          <Source id={playerMap.id} type="geojson" data={playerMap.data} />
+          <Layer {...playerMap.layerOptions} />
+          </>
+        )}
         <ScaleControl position="bottom-right"/>
         <NavigationControl />
         <div className="stacked-container">

@@ -26,7 +26,7 @@ export const playerMap = {
   id:"do_not_change_this_value",
 
   layerOptions: {
-    id: "do_not_change_this_valu",
+    id: "do_not_change_this_value",
     type: "fill",
     source: "do_not_change_this_value",
     paint: {
