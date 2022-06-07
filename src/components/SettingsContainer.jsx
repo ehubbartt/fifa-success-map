@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
 import {BsArrowBarDown} from 'react-icons/bs'
 import SelectorContainer from './SelectorContainer';
-import { types } from "../constants/mapTypes";
 import { mapData } from "../constants/mapData";
 import { styles } from "../constants/styles";
 import {useMapContext} from '../context/mapContext'
 import { matchesMap } from '../constants/matchesMap';
 import { countriesMap } from '../constants/countriesMap';
+import { playerMap } from '../constants/playerMap';
 
 const SettingsContainer = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -29,8 +29,9 @@ const SettingsContainer = () => {
     if (name === "World Cup Locations") {
       setCurMap(matchesMap);
     } else if (name === "Country Data") {
-
       setCurMap(countriesMap);
+    } else if (name === "Player Data") {
+      setCurMap(playerMap)
     }
   }
 
