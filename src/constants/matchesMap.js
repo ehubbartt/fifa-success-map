@@ -47,7 +47,7 @@ export const matchesMap = {
         ],
       },
       "circle-color": {
-        property: "Attendance",
+        property: "mag", // dot density, don't change colors
         stops: [
           [grades[0], colors[0]],
           [grades[1], colors[1]],

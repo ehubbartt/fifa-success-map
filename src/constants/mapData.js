@@ -5,4 +5,7 @@ export const mapData = [
   {
     name: "Country Data",
   },
+  {
+    name: "Player Data"
+  }
 ];

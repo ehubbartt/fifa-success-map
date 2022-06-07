@@ -31,6 +31,8 @@ const MapContainer = () => {
       setDataTitle("Country Data");
       setFeatures(curFeatures[0]);
       setCurData(curFeatures[0]);
+    } else if(curMap.name === "playerMap") {
+      console.log(map.features)
     }
   };
 
