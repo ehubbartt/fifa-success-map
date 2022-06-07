@@ -26,7 +26,7 @@ const About = () => {
         })}
       </div>
       <div>
-        <h4>Goal: The project was designed to observe the success of the FIFA World Cup in terms of country size and player size. Visualize matches over time with maps that focus on players, teams, and matches. The project hopes to provide some insights into the success or failure of the World Cup in different countries. It also provides a way to look at the success of the players and the history of the game.</h4>
+        <h4>Goal: </h4>
         <p>{aboutInfo.goal}</p>
       </div>
       <div>
@@ -34,12 +34,9 @@ const About = () => {
         <p>{aboutInfo.methodology}</p>
       </div>
       <div>
-      <h4>
-      Data Sources:{" "}
-      <a href="https://www.kaggle.com/datasets/abecklas/fifa-world-cup?resource=download&select=WorldCups.csv">
-      Team/Match Data
-      </a>
-      </h4>
+        <h4>Data Sources: <a href="https://www.kaggle.com/datasets/abecklas/fifa-world-cup?resource=download&select=WorldCups.csv">Team/Match Data</a>{"\n"}
+        <a href="https://www.kaggle.com/datasets/stefanoleone992/fifa-22-complete-player-dataset?select=players_22.csv">Player Data</a>{"\n"}
+        <a href="https://flagpedia.net/download/icons?msclkid=0e84e4f3ce7111ec98f29f1db3661ae8v">Country Flag Images</a></h4>
         <p>{aboutInfo.dataSources}</p>
       </div>
       <div>
