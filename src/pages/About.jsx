@@ -37,7 +37,7 @@ const About = () => {
         <h4>Data Sources: <a href="https://www.kaggle.com/datasets/abecklas/fifa-world-cup?resource=download&select=WorldCups.csv">Team/Match Data</a>{"\n"}
         <a href="https://www.kaggle.com/datasets/stefanoleone992/fifa-22-complete-player-dataset?select=players_22.csv">Player Data</a>{"\n"}
         <a href="https://flagpedia.net/download/icons?msclkid=0e84e4f3ce7111ec98f29f1db3661ae8v">Country Flag Images</a></h4>
-        {aboutInfo.dataSources}
+        <p>{aboutInfo.dataSources}</p>
       </div>
       <div>
         <h4>Acknowledgements: </h4>
