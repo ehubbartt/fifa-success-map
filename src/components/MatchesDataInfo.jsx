@@ -49,6 +49,10 @@ const MatchesDataInfo = () => {
         <h3>Attendance</h3>
         <p>{curData.properties.Attendance}</p>
       </div>
+      <div className="data-container">
+        <h3>Stage</h3>
+        <p>{curData.properties.Stage}</p>
+      </div>
     </>
   );
 };

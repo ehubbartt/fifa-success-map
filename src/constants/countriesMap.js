@@ -1,8 +1,8 @@
 import { countries_data } from '../assets/data/countries_data.js';
 
-const grades = [1000, 10000, 50000],
+const grades = [10, 100, 1000],
   colors = ["rgb(208,209,230)", "rgb(103,169,207)", "rgb(1,108,89)"],
-  radii = [7, 7, 7];
+  radii = [6, 8, 10];
 
 export const countriesMap = {
   name: "countriesMap",
@@ -21,7 +21,7 @@ export const countriesMap = {
     paint: {
       // increase the radii of the circle as the zoom level and dbh value increases
       "circle-radius": {
-        property: "Attendance",
+        property: "success_rating",
         stops: [
           [
             {
@@ -47,7 +47,7 @@ export const countriesMap = {
         ],
       },
       "circle-color": {
-        property: "Attendance",
+        property: "success_rating",
         stops: [
           [grades[0], colors[0]],
           [grades[1], colors[1]],
