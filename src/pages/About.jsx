@@ -32,9 +32,9 @@ const About = () => {
 
       <div>
         <h4>Data Sources: </h4>
-        {aboutInfo.dataSources}
+        <p>{aboutInfo.dataSources}</p>
       </div>
-      
+
       <div>
         <h4>Methodology: </h4>
         <p>{aboutInfo.methodology}</p>
