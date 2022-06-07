@@ -3,11 +3,11 @@
 [Link to Deployed Site](https://geog-458-final-project.pages.dev/)
 
 ## Team Members
-Hudson Potts 
-Ethan Michael Hubbart
-Aaron Thai
-Yuantai Li
-Chalsea Chen
+- Hudson Potts 
+- Ethan Michael Hubbart
+- Aaron Thai
+- Yuantai Li
+- Chalsea Chen
 
 ### Project Description
 The project was designed to observe the success of different countries in the FIFA World Cup in terms of where matches were hosted, number of wins, and number of players. This project visualizes World Cup data over time with maps that focus on matches, teams, and countries where players originate from. 
