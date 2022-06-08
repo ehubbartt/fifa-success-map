@@ -26,17 +26,17 @@ const About = () => {
       </div>
       <div className="about-section">
         <h3><b>Goal:</b></h3>
-        <p>{aboutInfo.goal}</p>
+        {aboutInfo.goal}
       </div>
 
       <div className="about-section">
       <h3>Data Sources: </h3>
-        <p>{aboutInfo.dataSources}</p>
+        {aboutInfo.dataSources}
       </div>
 
       <div className="about-section">
       <h3>Methodology: </h3>
-        <p>{aboutInfo.methodology}</p>
+        {aboutInfo.methodology}
       </div>
 
       <div className="about-section">

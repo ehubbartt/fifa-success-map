@@ -22,6 +22,7 @@ nav {
   display: grid;
   place-items: center;
   height: 2rem;
+  color: white;
 }
 
 .about {
