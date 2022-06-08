@@ -22,7 +22,7 @@ const mapboxAccessToken =
   "pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw";
 
 const MapContainer = () => {
-  const { curMap, setFeatures, setDataTitle, setCurData, setInputSliderValue, setInputDateValue } = useMapContext();
+  const { curMap, setFeatures, setDataTitle, setCurData, setInputSliderValue, setInputDateValue, curStyle } = useMapContext();
 
   const handleClick = (map) => {
     const curFeatures = map.features;
@@ -52,7 +52,7 @@ const MapContainer = () => {
           latitude: curMap.center[1],
           zoom: curMap.zoom,
         }}
-        mapStyle={curMap.style}
+        mapStyle={curStyle}
         mapboxAccessToken={mapboxAccessToken}
         projection={curMap.projection}
         interactiveLayerIds={[curMap.layerOptions.id]}
