@@ -4,6 +4,7 @@ import MatchesDataInfo from "./MatchesDataInfo";
 import MapInputSlider from "./MapInputSlider";
 import { useMapContext } from "../context/mapContext";
 import CountryDataInfo from "./CountryDataInfo"
+import PlayersDataInfo from "./PlayersDataInfo"
 
 const MapInfo = () => {
   const { dataTitle } = useMapContext();
@@ -31,6 +32,7 @@ const MapInfo = () => {
       <div className={isOpen ? "map-info" : "map-info closed"}>
         {dataTitle.includes("World Cup Data") && <MatchesDataInfo />}
         {dataTitle.includes("Country Data") && <CountryDataInfo />}
+        {dataTitle.includes("Total Players Data") && <PlayersDataInfo />}
         </div>
     </div>
   );

@@ -4,7 +4,6 @@ import { useMapContext } from "../context/mapContext";
 import mapboxgl from "mapbox-gl";
 import MapInfo from "./MapInfo";
 import SettingsContainer from "./SettingsContainer";
-
 import { matchesMap } from "../constants/matchesMap";
 import {playerMap} from "../constants/playerMap";
 import { countriesMap } from "../constants/countriesMap";
@@ -37,7 +36,9 @@ const MapContainer = () => {
       setFeatures(curFeatures[0]);
       setCurData(curFeatures[0]);
     } else if(curMap.name === "playerMap") {
-      console.log(map.features)
+      setDataTitle("Total Players Data");
+      setFeatures(curFeatures[0]);
+      setCurData(curFeatures[0]);
     }
   };
 
