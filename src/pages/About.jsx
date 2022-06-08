@@ -8,7 +8,6 @@ const About = () => {
 
   return (
     <div className="about-container">
-      <h1>ABOUT</h1>
       <h3 className="team-subheading">Team Members</h3>
       <div className="team-members-container">
         {teamMembers.map((member, index) => {
