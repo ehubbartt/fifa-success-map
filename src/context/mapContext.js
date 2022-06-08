@@ -10,8 +10,11 @@ const AppProvider = ({ children }) => {
   const [curData, setCurData] = useState({});
   const [inputDateValue, setInputDateValue] = useState();
   const [inputSliderValue, setInputSliderValue] = useState();
+  const [curStyle, setCurStyle] = useState("mapbox://styles/mapbox/dark-v10");
+
   return (
-    <AppContext.Provider value={{ curMap, 
+    <AppContext.Provider value={{ 
+    curMap, 
     setCurMap, 
     features, 
     setFeatures, 
@@ -22,7 +25,9 @@ const AppProvider = ({ children }) => {
     inputDateValue,
     setInputDateValue,
     inputSliderValue,
-    setInputSliderValue
+    setInputSliderValue,
+    curStyle,
+    setCurStyle
      }}>
       {children}
     </AppContext.Provider>

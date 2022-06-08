@@ -22,23 +22,22 @@ const mapboxAccessToken =
   "pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw";
 
 const MapContainer = () => {
-  const { curMap, setFeatures, setDataTitle, setCurData, setInputSliderValue, setInputDateValue } = useMapContext();
+  const { curMap, setFeatures, setDataTitle, setCurData, setInputSliderValue, setInputDateValue, curStyle } = useMapContext();
 
   const handleClick = (map) => {
     const curFeatures = map.features;
     if (curMap.name === "matchesMap") {
       setFeatures(curFeatures);
       setDataTitle("World Cup Data");
+      //last index because reverse chronological order
       setCurData(curFeatures[curFeatures.length - 1])
       setInputSliderValue(0);
       setInputDateValue(curFeatures[curFeatures.length - 1].properties.Datetime);
     } else if (curMap.name === "countriesMap") {
       setDataTitle("Country Data");
-      setFeatures(curFeatures[0]);
       setCurData(curFeatures[0]);
-    } else if(curMap.name === "playerMap") {
+    } else if (curMap.name === "playerMap") {
       setDataTitle("Total Players Data");
-      setFeatures(curFeatures[0]);
       setCurData(curFeatures[0]);
     }
   };
@@ -53,7 +52,7 @@ const MapContainer = () => {
           latitude: curMap.center[1],
           zoom: curMap.zoom,
         }}
-        mapStyle={curMap.style}
+        mapStyle={curStyle}
         mapboxAccessToken={mapboxAccessToken}
         projection={curMap.projection}
         interactiveLayerIds={[curMap.layerOptions.id]}

@@ -10,16 +10,14 @@ import { playerMap } from '../constants/playerMap';
 
 const SettingsContainer = () => {
   const [isOpen, setIsOpen] = useState(true);
-  const {curMap, setCurMap, setCurData, setFeatures, setDataTitle} = useMapContext();
+  const {curMap, setCurMap, setCurData, setFeatures, setDataTitle, setCurStyle} = useMapContext();
 
   const handleCollapse = () => {
     setIsOpen(!isOpen);
   }
 
   const handleStyleChange = (style) => {
-    let newMap = { ...curMap };
-    newMap.style = style.uri;
-    setCurMap(newMap);
+    setCurStyle(style.uri);
   };
 
   const handleDataChange = ({name})=> {
