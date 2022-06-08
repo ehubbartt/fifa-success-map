@@ -37,7 +37,10 @@ const MapContainer = () => {
       setFeatures(curFeatures[0]);
       setCurData(curFeatures[0]);
     } else if(curMap.name === "playerMap") {
-      console.log(map.features)
+      console.log(curFeatures)
+      setDataTitle("Player Data");
+      setFeatures(curFeatures[0]);
+      setCurData(curFeatures[0]);
     }
   };
 
@@ -56,6 +59,7 @@ const MapContainer = () => {
         projection={curMap.projection}
         interactiveLayerIds={[curMap.layerOptions.id]}
       >
+      {/* this should be mapped but im lazy */}
         {curMap.name.includes("matchesMap") && (
           <>
             <Source id={matchesMap.id} type="geojson" data={matchesMap.data} />
