@@ -15,11 +15,11 @@ export const aboutInfo = {
   <p>
     FIFA map data was obtained from Kaggle. 
     Data for match locations and countries / teams was orginally collected by Kaggle user Andre Becklas,
-    who took it from the FIFA  <a href="https://www.kaggle.com/datasets/abecklas/fifa-world-cup?resource=download&select=WorldCups.csv" target="_blank">World Cup Archive website</a>.
+    who took it from the FIFA  <a href="https://www.kaggle.com/datasets/abecklas/fifa-world-cup?resource=download&select=WorldCups.csv" target="_blank" rel="noreferrer">World Cup Archive website</a>.
     Data for players was originally collected by Kaggle user Stefano Leone, 
-    who extracted it from the  <a href="https://www.kaggle.com/datasets/stefanoleone992/fifa-22-complete-player-dataset?select=players_22.csv" target="_blank">video game FIFA 22</a>.
-    Country boundary shapefile for thr choropleth map of number of players was obtained from <a href="https://datahub.io/core/geo-countries">DataHub</a> and <a href="https://geoportal.statistics.gov.uk/datasets/ons::countries-december-2021-uk-bgc/explore?location=52.905565%2C-1.566814%2C6.12&showTable=true" target="_blank">GeoPortal</a>
-    To see the processed data files we used, please visit the <a href="https://github.com/ehubbartt/fifa-success-map" target="_blank">GitHub Project</a>
+    who extracted it from the  <a href="https://www.kaggle.com/datasets/stefanoleone992/fifa-22-complete-player-dataset?select=players_22.csv" target="_blank" rel="noreferrer">video game FIFA 22</a>.
+    Country boundary shapefile for thr choropleth map of number of players was obtained from <a href="https://datahub.io/core/geo-countries" rel="noreferrer">DataHub</a> and <a href="https://geoportal.statistics.gov.uk/datasets/ons::countries-december-2021-uk-bgc/explore?location=52.905565%2C-1.566814%2C6.12&showTable=true" target="_blank" rel="noreferrer">GeoPortal</a>
+    To see the processed data files we used, please visit the <a href="https://github.com/ehubbartt/fifa-success-map" target="_blank" rel="noreferrer">GitHub Project</a>
   </p>,
   
   methodology: 
@@ -38,6 +38,6 @@ export const aboutInfo = {
     We used React Mapbox GL JS as the framework for this project. We used mapshaper.org to compress geojson files. 
     Our data and project files are hosted on Github. Basemaps are provided by Mapbox.
     Great thanks to Professor Zhao and TA Jiaxin Feng of GEOG458 for the lecture, labs, and comments.
-    Course GitHub for Professor Zhao's GEOG458 class is <a href="https://github.com/jakobzhao/geog458" target="_blank">here</a>. 
+    Course GitHub for Professor Zhao's GEOG458 class is <a href="https://github.com/jakobzhao/geog458" target="_blank" rel="noreferrer">here</a>. 
   </p>
 };
