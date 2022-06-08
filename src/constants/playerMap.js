@@ -1,20 +1,4 @@
 import { totalplayers_data } from '../assets/data/totalplayers_data.js';
-const layers = [
-'0-49',
-'50-99',
-'100-149',
-'150-199',
-'200-249',
-'250+'
-];
-const colors = [
-'#c6dbef',
-'#9ecae1',
-'#6baed6',
-'#4292c6',
-'#2171b5',
-'#08306b'
-];
 export const playerMap = {
   name: "playerMap",
   title: "player",

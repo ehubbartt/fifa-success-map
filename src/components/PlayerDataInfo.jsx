@@ -2,7 +2,7 @@ import React from 'react'
 import { useMapContext } from "../context/mapContext";
 
 const PlayerDataInfo = () => {
-const {curData } = useMapContext();
+const { curData } = useMapContext();
 
   return (
     <>

@@ -3,7 +3,6 @@ import { useMapContext } from "../context/mapContext";
  
 const PlayersDataInfo = () => {
   const {curData} = useMapContext();
-  let country = curData.properties.country;
   return (
     <>
       <div className="data-container">
