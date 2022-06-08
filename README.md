@@ -1,6 +1,6 @@
 # Mapping FIFA World Cup Data
 
-[Link to Deployed Site](https://geog-458-final-project.pages.dev/)
+[Link to Deployed Site](https://fifasuccessmap.xyz/)
 
 ## Team Members
 - Hudson Potts 
