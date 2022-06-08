@@ -12,18 +12,18 @@ export const aboutInfo = {
   dataSources: 
   "FIFA map data was obtained from Kaggle. " + 
   "Data for match locations and countries / teams was orginally collected by Kaggle user Andre Becklas, " +
-  "who took it from the FIFA World Cup Archive website. " +
-  "https://www.kaggle.com/datasets/abecklas/fifa-world-cup?resource=download&select=WorldCups.csv " +
+  "who took it from the FIFA World Cup Archive website: " +
+  "https://www.kaggle.com/datasets/abecklas/fifa-world-cup?resource=download&select=WorldCups.csv. " +
 
   "Data for players was originally collected by Kaggle user Stefano Leone, " +
-  "who extracted it from the video game FIFA 22. " + 
-  "https://www.kaggle.com/datasets/stefanoleone992/fifa-22-complete-player-dataset?select=players_22.csv " +
+  "who extracted it from the video game FIFA 22: " + 
+  "https://www.kaggle.com/datasets/stefanoleone992/fifa-22-complete-player-dataset?select=players_22.csv. " +
 
   "Country boundary shapefile for thr choropleth map of number of players was obtained from: " +
-  "PUT THE LINK HERE " +
+  "https://datahub.io/core/geo-countries and https://geoportal.statistics.gov.uk/datasets/ons::countries-december-2021-uk-bgc/explore?location=52.905565%2C-1.566814%2C6.12&showTable=true." +
 
   "To see the processed data files we used, please visit the project GitHub here: " +
-  "https://github.com/ehubbartt/geog-458-final-project",
+  "https://github.com/ehubbartt/geog-458-final-project.",
 
   
   methodology: 

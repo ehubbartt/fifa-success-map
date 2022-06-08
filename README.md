@@ -29,7 +29,9 @@ Data for match locations and countries / teams was orginally collected by Kaggle
 
 Data for players was originally collected by Kaggle user Stefano Leone, who extracted it from the video game FIFA 22. See the data [here](https://www.kaggle.com/datasets/stefanoleone992/fifa-22-complete-player-dataset?select=players_22.csv ).
 
-Country boundary shapefile for the choropleth map of number of players was obtained from: PUT THE LINK HERE 
+Country boundary shapefile for the choropleth map of number of players was obtained from: [world](https://datahub.io/core/geo-countries) and 
+[uk](https://geoportal.statistics.gov.uk/datasets/ons::countries-december-2021-uk-bgc/explore?location=52.905565%2C-1.566814%2C6.12&showTable=true).
+
 
 To see the processed data files we used, please visit the project GitHub [here](https://github.com/ehubbartt/geog-458-final-project/tree/master/src/asset).
 
