@@ -31,8 +31,9 @@ export const aboutInfo = {
   "Our main map has 3 base maps that the user can view, by clicking on the Styles buttons users can switch the base map to dark, light, and street base maps provided by Mapbox. " +
   "And there are 3 interactive maps that users can switch to check. For the World Cup Locations map, the user can click on each match to check the information including the date, location, result, and attendance of the match. " +
   "For the country map, the user can click on the country that participated World Cup and check the information about the achievements. " +
-  
-  "Hudson processed the data in R and manually added latitude and longtitude coordinates to the stadiums by searching them on Google and Google Maps.",
+  "For the players map, the user can click on each country that participated World Cup and check out the information regarding their total players. " +
+
+  "Hudson processed the data in R and manually added latitude and longtitude coordinates to the stadiums by searching them on Google and Google Maps." ,
   
   acknowledgements: 
   "We used React Mapbox GL JS as the framework for this project. We used mapshaper.org to compress geojson files. " +

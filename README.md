@@ -20,7 +20,8 @@ The project hopes to provide insight into World Cup success or failure for diffe
 
 The projection of our maps is Mercator and located at the center of [0,16] with zoom level 1. Our main map has 3 base maps that the user can view, by clicking on the Styles buttons users can switch the base map to dark, light, and street base maps provided by Mapbox. 
 
-There are 3 interactive maps that users can switch to check. For the World Cup Locations map, the user can click on each match to check the information including the date, location, result, and attendance of the match. For the country map, the user can click on the country that participated World Cup and check the information about the achievements. 
+There are 3 interactive maps that users can switch to check. For the World Cup Locations map, the user can click on each match to check the information including the date, location, result, and attendance of the match. For the country map, the user can click on the country that participated World Cup and check the information about the achievements. For the players map, the user can click on each country that participated World Cup and check out the information regarding their total players. 
+
 
 ### Data sources
  FIFA map data was obtained from Kaggle. 
