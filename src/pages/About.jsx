@@ -26,22 +26,22 @@ const About = () => {
         })}
       </div>
       <div>
-        <h4>Goal:</h4>
+        <h3><b>Goal:</b></h3>
         <p>{aboutInfo.goal}</p>
       </div>
 
       <div>
-        <h4>Data Sources: </h4>
+      <h3>Data Sources: </h3>
         <p>{aboutInfo.dataSources}</p>
       </div>
 
       <div>
-        <h4>Methodology: </h4>
+      <h3>Methodology: </h3>
         <p>{aboutInfo.methodology}</p>
       </div>
 
       <div>
-        <h4>Acknowledgements: </h4>
+      <h3>Acknowledgements: </h3>
         {aboutInfo.acknowledgements}
       </div>
     </div>
