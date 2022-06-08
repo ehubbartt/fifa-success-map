@@ -12,7 +12,6 @@ const MapInfo = () => {
     setIsOpen(!isOpen);
   };
 
-  console.log(dataTitle);
   return (
     <div className="map-info-container">
       <div className="top-container">

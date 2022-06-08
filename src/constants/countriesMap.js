@@ -12,12 +12,12 @@ export const countriesMap = {
   center: [0, 16],
   zoom: 1,
   projection: "mercator",
-  id:"do_not_change_this_value",
+  id:"COUNTRIES_MAP",
 
   layerOptions: {
-    id: "do_not_change_this_value",
+    id: "COUNTRIES_MAP",
     type: "circle",
-    source: "do_not_change_this_value",
+    source: "COUNTRIES_MAP",
     paint: {
       // increase the radii of the circle as the zoom level and dbh value increases
       "circle-radius": {
