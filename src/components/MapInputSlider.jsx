@@ -3,6 +3,7 @@ import { Slider } from "@mui/material";
 import { useMapContext } from "../context/mapContext";
 const MapInputSlider = ({ isOpen }) => {
   const {setCurData, features, inputDateValue, setInputDateValue, inputSliderValue, setInputSliderValue} = useMapContext();
+  //reverse array bc reverse chronological order
   let allData = Array.from(features).reverse();
 
   let marks =  allData.map((item, index) => {

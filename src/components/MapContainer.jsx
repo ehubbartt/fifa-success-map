@@ -29,16 +29,15 @@ const MapContainer = () => {
     if (curMap.name === "matchesMap") {
       setFeatures(curFeatures);
       setDataTitle("World Cup Data");
+      //last index because reverse chronological order
       setCurData(curFeatures[curFeatures.length - 1])
       setInputSliderValue(0);
       setInputDateValue(curFeatures[curFeatures.length - 1].properties.Datetime);
     } else if (curMap.name === "countriesMap") {
       setDataTitle("Country Data");
-      setFeatures(curFeatures[0]);
       setCurData(curFeatures[0]);
-    } else if(curMap.name === "playerMap") {
+    } else if (curMap.name === "playerMap") {
       setDataTitle("Total Players Data");
-      setFeatures(curFeatures[0]);
       setCurData(curFeatures[0]);
     }
   };
