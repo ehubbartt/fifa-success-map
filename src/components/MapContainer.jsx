@@ -14,6 +14,7 @@ import Map, {
   Source,
   Layer,
 } from "react-map-gl";
+import Legend from "./Legend";
 mapboxgl.workerClass =
   // eslint-disable-next-line import/no-webpack-loader-syntax
   require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
@@ -82,6 +83,7 @@ const MapContainer = () => {
           <SettingsContainer />
           <MapInfo />
         </div>
+        <Legend />
       </Map>
     </div>
   );
