@@ -7,7 +7,7 @@ const About = () => {
     "https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg";
 
   return (
-    <div className="page-container about-container">
+    <div className="about-container">
       <h1>ABOUT</h1>
       <h3 className="team-subheading">Team Members</h3>
       <div className="team-members-container">
@@ -25,22 +25,22 @@ const About = () => {
           );
         })}
       </div>
-      <div>
+      <div className="about-section">
         <h3><b>Goal:</b></h3>
         <p>{aboutInfo.goal}</p>
       </div>
 
-      <div>
+      <div className="about-section">
       <h3>Data Sources: </h3>
         <p>{aboutInfo.dataSources}</p>
       </div>
 
-      <div>
+      <div className="about-section">
       <h3>Methodology: </h3>
         <p>{aboutInfo.methodology}</p>
       </div>
 
-      <div>
+      <div className="about-section">
       <h3>Acknowledgements: </h3>
         {aboutInfo.acknowledgements}
       </div>
